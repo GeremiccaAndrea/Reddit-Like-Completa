@@ -1,0 +1,11 @@
+<p>{{x.a}}</p>
+
+<p>{{x.oggetto}}</p>
+
+<div *ngIf = "(nascondi)">  <!-- voglio vedere il corpo solo se nascondi = true-->
+    <p>{{x.corpo}}</p>
+</div>
+
+<button *ngIf = "!(nascondi)" (click) = "espandi()"> espandi</button> <!-- se nascondi è false mostro il bottone-->
+
+<button *ngIf = "(nascondi)" (click) = "espandi()"> chiudi</button> <!-- se nascondi è true mostro il bottone-->

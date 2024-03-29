@@ -1,0 +1,20 @@
+<form> 
+  <input name = "a" #a>
+  <label for = "a"> A</label>
+  
+  <br>
+  <input name = "oggetto" #oggetto>
+  <label for = "oggetto"> oggetto</label>
+  
+  <br>
+  <input name = "corpo" #corpo>
+  <label for = "corpo"> corpo</label>
+
+  <br>
+  <button (click) = "nuovaMail(a,oggetto,corpo)"> Invia</button>
+
+</form>
+
+<div *ngFor = "let pippo of emails">
+  <app-sent-mail [x] = "pippo" ></app-sent-mail> <!-- visualizza le mail attraverso un'altro componente-->
+</div>
